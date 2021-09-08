@@ -34,9 +34,4 @@ aws ecr get-login-password  | docker login --username AWS --password-stdin $REGI
 
 docker build -f $DOCKERFILE -t $REGISTRY_URL/$REGISTRY_NAMESPACE/$IMAGE_NAME:$BUILD_NUMBER .
 
-#docker tag authserver:$1 500664183679.dkr.ecr.eu-west-3.amazonaws.com/dgp-reg/authserver:$1
-
 docker push $REGISTRY_URL/$REGISTRY_NAMESPACE/$IMAGE_NAME:$BUILD_NUMBER
-
-
-
